@@ -1,0 +1,11 @@
+build/
+runs/
+scripts/
+tmp_scripts/
+PRE_*
+BOOT*
+all_pre-roi.sh
+boot_fs.sh
+pre_roi_fs.sh
+roi_fs.sh
+X_ROIs.sh
