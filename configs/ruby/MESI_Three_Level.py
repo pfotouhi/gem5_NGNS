@@ -88,11 +88,11 @@ def create_system(options, full_system, system, dma_ports, bootmem,
             #
             # First create the Ruby objects associated with this cpu
             #
-            l0i_cache = L0Cache(size = '4096B', assoc = 1, is_icache = True,
+            l0i_cache = L0Cache(size = '64kB', assoc = 1, is_icache = True,
                 start_index_bit = block_size_bits,
                 replacement_policy = LRUReplacementPolicy())
 
-            l0d_cache = L0Cache(size = '4096B', assoc = 1, is_icache = False,
+            l0d_cache = L0Cache(size = '32kB', assoc = 1, is_icache = False,
                 start_index_bit = block_size_bits,
                 replacement_policy = LRUReplacementPolicy())
 
@@ -237,8 +237,9 @@ def create_system(options, full_system, system, dma_ports, bootmem,
         dma_cntrl.requestToDir = MessageBuffer()
         dma_cntrl.requestToDir.master = ruby_system.network.slave
 
-    all_cntrls = l0_cntrl_nodes + \
-                 l1_cntrl_nodes + \
+#    all_cntrls = l0_cntrl_nodes + \
+#                 l1_cntrl_nodes + \
+    all_cntrls = l1_cntrl_nodes + \
                  l2_cntrl_nodes + \
                  dir_cntrl_nodes + \
                  dma_cntrl_nodes
