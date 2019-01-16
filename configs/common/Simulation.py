@@ -709,37 +709,7 @@ def run(options, root, testsys, cpu_class):
             exit_event = repeatSwitch(testsys, repeat_switch_cpu_list,
                                       maxtick, options.repeat_switch)
         else:
-           #exit_event = benchCheckpoints(options, maxtick, cptdir)
-
-           m5.stats.reset() # resert stats for exact stats on ROI
-           exit_event = m5.simulate()
-           exit_cause = exit_event.getCause()
-           while exit_cause != "m5_exit instruction encountered":
-              # If the user pressed ctrl-c on the host, then we really should exit
-              if exit_cause == "user interrupt received":
-                    print ("User interrupt! Exiting")
-                    break
-
-              if exit_cause == "checkpoint":
-                   m5.checkpoint(joinpath(cptdir, "cpt.%d"))
-                   break
-
-              print ("exit cause = %s" % exit_cause)
-
-              if exit_cause == "This is MY EXIT EVENT":
-
-                    print ("**** Manual Checkpoint at ROI ****")
-                    m5.checkpoint(joinpath(cptdir, "cpt.%d"))
-                    print ("**** Manual Checkpoint done ****")
-                    #print "**** Exiting ROI ****"
-                    #m5.stats.dump()
-                    #m5.stats.reset()
-                    sys.exit(exit_event.getCode())
-                    exit_event = m5.simulate()
-                    exit_cause = exit_event.getCause()
-
-
-
+            exit_event = benchCheckpoints(options, maxtick, cptdir)
 
     print('Exiting @ tick %i because %s' %
           (m5.curTick(), exit_event.getCause()))

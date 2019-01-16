@@ -472,7 +472,6 @@ dumpresetstats(ThreadContext *tc, Tick delay, Tick period)
     Tick repeat = period * SimClock::Int::ns;
 
     Stats::schedStatEvent(true, true, when, repeat);
-    exitSimLoop("This is MY EXIT EVENT"); //Since hooks are labled with dumpresetstats function calls, this is needed for signaling python upon hooks
 }
 
 void
