@@ -9,3 +9,5 @@ boot_fs.sh
 pre_roi_fs.sh
 roi_fs.sh
 X_ROIs.sh
+
+*.pyc
