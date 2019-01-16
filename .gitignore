@@ -1,4 +1,3 @@
-build/
 runs/
 scripts/
 tmp_scripts/
@@ -10,4 +9,31 @@ pre_roi_fs.sh
 roi_fs.sh
 X_ROIs.sh
 
+
+build
+parser.out
+parsetab.py
+cscope.files
+cscope.out
 *.pyc
+*~
+.*.swp
+.*.swo
+m5out
+/src/doxygen
+/ext/dramsim2/DRAMSim2
+/ext/mcpat/regression/*/*.out
+/util/m5/*.o
+/util/m5/*.a
+/util/m5/m5
+/util/packet_pb2.py
+/util/tap/*.d
+/util/tap/*.o
+/util/tap/m5tap
+/util/term/m5term
+/system/arm/dt/*.dtb
+/system/arm/simple_bootloader/*.o
+/system/arm/simple_bootloader/boot.arm
+/system/arm/simple_bootloader/boot_emm.arm
+/system/arm/aarch64_bootloader/boot_emm.arm64
+
