@@ -56,10 +56,14 @@ class Mesh_XY_4C(SimpleTopology):
 	# In Mesh_XY, num_cpu = num_routers. I.e. L1cntrl and Dir1ctrnl are at same router
 	ext_links = []
         for (i, n) in enumerate(network_nodes):
+	    #cluster_id, in_cluster_id = divmod(i, concentration_factor)
+	    #cntrl_level, router_id = divmod(cluster_id, num_routers)
+            #assert((cntrl_level*concentration_factor + in_cluster_id) < cntrls_per_router)
+	    if (i< int(options.num_cpus)):
+		router_id = i/num_routers
+	    else:
+		router_id = i%num_routers
             print "EXTERNAL LINKS ", i,n 
-	    cluster_id, in_cluster_id = divmod(i, concentration_factor)
-	    cntrl_level, router_id = divmod(cluster_id, num_routers)
-            assert((cntrl_level*concentration_factor + in_cluster_id) < cntrls_per_router)
             ext_links.append(ExtLink(link_id=link_count, ext_node=n,
                                     int_node=routers[router_id],
                                     latency = link_latency, weight=1))
