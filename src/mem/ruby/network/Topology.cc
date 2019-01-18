@@ -50,8 +50,9 @@ const int INFINITE_LATENCY = 10000; // Yes, this is a big hack
 
 Topology::Topology(uint32_t num_routers,
                    const vector<BasicExtLink *> &ext_links,
-                   const vector<BasicIntLink *> &int_links)
-    : m_nodes(ext_links.size() + 64), m_number_of_switches(num_routers),
+                   const vector<BasicIntLink *> &int_linksi,
+		   const int NumMachines)
+    : m_nodes(NumMachines), m_number_of_switches(num_routers),
       m_ext_link_vector(ext_links), m_int_link_vector(int_links)
 {
     // Total nodes/controllers in network

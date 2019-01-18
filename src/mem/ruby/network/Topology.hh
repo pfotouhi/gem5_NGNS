@@ -67,7 +67,8 @@ class Topology
 {
   public:
     Topology(uint32_t num_routers, const std::vector<BasicExtLink *> &ext_links,
-             const std::vector<BasicIntLink *> &int_links);
+             const std::vector<BasicIntLink *> &int_links,
+	     const int NumMachines);
 
     uint32_t numSwitches() const { return m_number_of_switches; }
     void createLinks(Network *net);

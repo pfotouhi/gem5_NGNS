@@ -138,6 +138,7 @@ class RubySystem : public ClockedObject
     Profiler* m_profiler;
     CacheRecorder* m_cache_recorder;
     std::vector<std::map<uint32_t, AbstractController *> > m_abstract_controls;
+    int getNumControllers() const {return m_abs_cntrl_vec.size();}
 };
 
 class RubyStatsCallback : public Callback
