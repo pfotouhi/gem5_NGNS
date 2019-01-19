@@ -34,7 +34,7 @@ from m5.objects import *
 from BaseTopology import SimpleTopology
 
 
-class SUMA(SimpleTopology):
+class ORome(SimpleTopology):
     description='ORome'
 
     def __init__(self, controllers):
