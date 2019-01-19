@@ -96,7 +96,7 @@ def build_test_system(np):
         test_sys = makeSparcSystem(test_mem_mode, bm[0], cmdline=cmdline)
     elif buildEnv['TARGET_ISA'] == "x86":
         test_sys = makeLinuxX86System(test_mem_mode, options.num_cpus, bm[0],
-                options.ruby, cmdline=cmdline)
+                options.ruby, cmdline=cmdline, options=options)
     elif buildEnv['TARGET_ISA'] == "arm":
         test_sys = makeArmSystem(test_mem_mode, options.machine_type,
                                  options.num_cpus, bm[0], options.dtb_filename,
@@ -253,7 +253,7 @@ def build_drive_system(np):
         drive_sys = makeSparcSystem(drive_mem_mode, bm[1], cmdline=cmdline)
     elif buildEnv['TARGET_ISA'] == 'x86':
         drive_sys = makeLinuxX86System(drive_mem_mode, np, bm[1],
-                                       cmdline=cmdline)
+                                       cmdline=cmdline, options=options)
     elif buildEnv['TARGET_ISA'] == 'arm':
         drive_sys = makeArmSystem(drive_mem_mode, options.machine_type, np,
                                   bm[1], options.dtb_filename, cmdline=cmdline,

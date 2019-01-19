@@ -45,6 +45,7 @@ from m5.objects import *
 from Benchmarks import *
 from m5.util import *
 from common import PlatformConfig
+from common import Options
 
 # Populate to reflect supported os types per target ISA
 os_types = { 'alpha' : [ 'linux' ],
@@ -631,7 +632,7 @@ def makeX86System(mem_mode, numCPUs=1, mdesc=None, self=None, Ruby=False):
     self.intel_mp_table.ext_entries = ext_entries
 
 def makeLinuxX86System(mem_mode, numCPUs=1, mdesc=None, Ruby=False,
-                       cmdline=None):
+                       cmdline=None, options=None):
     self = LinuxX86System()
 
     # Build up the x86 system and then specialize it for Linux
@@ -679,7 +680,7 @@ def makeLinuxX86System(mem_mode, numCPUs=1, mdesc=None, Ruby=False,
     if not cmdline:
         cmdline = 'earlyprintk=ttyS0 console=ttyS0 lpj=7999923 root=/dev/sda1'
     self.boot_osflags = fillInCmdline(mdesc, cmdline)
-    self.kernel = binary('/home/pfotouhi/FS/vmlinux')
+    self.kernel = binary(options.kernel)
     return self
 
 
