@@ -62,8 +62,7 @@ Network::Network(const Params *p)
     assert(m_virtual_networks != 0);
 
     m_topology_ptr = new Topology(p->routers.size(), p->ext_links,
-                                  p->int_links,
-				  p->ruby_system->getNumControllers());
+                                  p->int_links);
 
     // Allocate to and from queues
     // Queues that are getting messages from protocol
