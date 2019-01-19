@@ -40,7 +40,6 @@ class SUMA(SimpleTopology):
     def __init__(self, controllers):
         self.nodes = controllers
 
-
     def makeTopology(self, options, network, IntLink, ExtLink, Router):
         # link counter to set unique link ids
 	link_count = 0
