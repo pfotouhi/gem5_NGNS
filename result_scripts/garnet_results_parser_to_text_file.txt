@@ -1,0 +1,125 @@
+#!/usr/bin/env python
+
+import re 
+
+# simple, generic result parser for NoCs. Works only with gem5 version that supports link traversal collection of each individual link
+
+ext_in_traversals = 0
+ext_out_traversals = 0
+total_int_link_traversals = 0
+average_packet_latency = 0
+packet_queueing_latency = 0
+flits_received = 0
+flits_injected = 0
+average_hops = 0
+curr_link_traversals = 0
+total_per_int_link_traversals = 0
+total_router_traversals = 0 
+injected_traffic = 0
+accepted_traffic = 0
+sim_ticks = 0
+
+with open("/home/swerner/gem5_bw_patch/m5out/myresults.txt", "a") as myfile:
+    with open("/home/swerner/gem5_bw_patch/m5out/stats.txt") as search: 
+	for line in search: 
+		if "sim_ticks" in line: 
+			temp = line.split()
+			sim_ticks = float(temp[1])
+		if "system.ruby.network.ext_in_link_utilization" in line: 
+			temp = line.split()
+			ext_in_traversals = float(temp[1])
+			print "External link traversals (in): ", ext_in_traversals
+		if "system.ruby.network.ext_out_link_utilization" in line: 
+			temp = line.split()
+                        ext_out_traversals = float(temp[1])
+                        print "External link traversals (out): ", ext_out_traversals
+		if "system.ruby.network.int_link_utilization" in line:
+			temp = line.split()
+                        total_int_link_traversals = float(temp[1])
+		if "system.ruby.network.int_link_utilization" in line: 
+			temp = line.split()
+			int_link_utilization = float(temp[1])
+			print "Internal link traversals: ", int_link_utilization
+		if "system.ruby.network.average_packet_latency" in line:
+			temp = line.split()
+			average_packet_latency = float(temp[1])
+                        print "Average packet latency: ", average_packet_latency
+		if "system.ruby.network.average_packet_queueing_latency" in line:
+			temp = line.split()
+			packet_queueing_latency = float(temp[1])
+			print "Average queuing delay: ", temp[1]  
+		if "system.ruby.network.flits_received::total" in line:
+			temp = line.split()
+			flits_received = temp[1]
+			print "Total number of flits received: ", temp[1]
+		if "system.ruby.network.flits_injected::total" in line:
+		 	temp = line.split()
+                        flits_injected = temp[1]
+			print "Average number of flits injected: ", temp[1]
+		if "system.ruby.network.average_hops" in line:
+			temp = line.split()
+                        average_hops = float(temp[1])
+                        print "Average number of hops: ", average_hops
+		if "buffer_reads" in line: 
+			temp = line.split()
+			total_router_traversals += float(temp[1])
+		if "number_link_traversals" in line: 
+      			temp = line.split()
+			words = re.split('[.]', temp[0])
+			curr_link_traversals = float(temp[1])			
+			total_per_int_link_traversals += curr_link_traversals
+			if curr_link_traversals != 0:
+			#	print words[4], ": ", curr_link_traversals 
+				writewords = str(words[4])
+				myfile.write(writewords)
+				myfile.write(" : ")
+				trav = str(curr_link_traversals)
+				myfile.write(trav + "\n")
+
+    ext_link_traversals = ext_out_traversals + ext_in_traversals
+    print "External link traversals: ", ext_link_traversals
+
+   # injected_traffic = float(float(flits_injected) / 256 / int(sim_ticks))
+   # accepted_traffic = float(float(flits_received) / 256 / int(sim_ticks))   
+
+    print "flits_injected ", flits_injected
+
+    myfile.write("Sim_ticks: ")
+    sticks = str(sim_ticks)
+    myfile.write(sticks + "\n")
+    myfile.write("Average packet latency: ")
+    s1 = str(average_packet_latency)
+    myfile.write(s1 + "\n")
+    myfile.write("Average queuing latency: ")
+    s = str(packet_queueing_latency)
+    myfile.write(s + "\n")
+    myfile.write("Average number of hops: ")
+    ss = str(average_hops)
+    myfile.write(ss + "\n")
+    myfile.write("Number of switch traversals: ")
+    ss1 = str(total_router_traversals)
+    myfile.write(ss1 + "\n")
+    myfile.write("Number of external link traversals: ")
+    s11 = str(ext_link_traversals)
+    myfile.write(s11 + "\n")
+    myfile.write("Number of internal link traversals: ")
+    s12 = str(int_link_utilization)
+    myfile.write(s12 + "\n")
+    myfile.write("Total Flits Received:  ")
+    s123 = str(flits_received)
+    myfile.write(s123 + "\n")
+    myfile.write("Total Flits Sent: ")
+    s1234 = str(flits_injected)
+    myfile.write(s1234 + "\n")
+   # myfile.write("Injected traffic: ")
+   # sss1 = str(injected_traffic)
+   # myfile.write(sss1 + "\n")
+   # myfile.write("Accepted traffic: ")
+   # sss12 = str(accepted_traffic)
+   # myfile.write(sss12 + "\n")
+    myfile.write("\n")
+
+
+
+
+
