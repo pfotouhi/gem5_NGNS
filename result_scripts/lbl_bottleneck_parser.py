@@ -135,7 +135,7 @@ print "===== Memory Controller / DRAM stats ======"
 print "Total number of cycles spent queueing "
 print "     Total: ", total_ticks_spent_queueing_mc / ticks_to_cycles 
 print "     Per controller: ", total_ticks_spent_queueing_mc / ticks_to_cycles / num_memory_controllers 
-print "Percentage cycles spent queueing (per controller): ", (total_ticks_spent_queueing_mc / ticks_to_cycles / num_memory_controllers) / sim_ticks
+print "Percentage cycles spent queueing (per controller): ", (total_ticks_spent_queueing_mc / num_memory_controllers) / sim_ticks
 print "Total cycles on data bus "
 print "     Total: ",  total_time_on_data_bus / ticks_to_cycles
 print "     Per controller: ", total_time_on_data_bus / ticks_to_cycles / num_memory_controllers 
