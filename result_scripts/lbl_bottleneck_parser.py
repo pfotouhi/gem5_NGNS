@@ -1,8 +1,22 @@
 #!/usr/bin/env python
+import sys 
+import os
+import string
 
-# This file extracts stats while jumping over the first set of sets
 
+# This file extracts stats while jumping over the first set of sets (in many workloads that is the app setup phase we're not interested in) 
+# IMPORTANT: You have to pass the *absolute* path of the stats.txt file to this script, e.g. /home/pfotouhi/LBL/is_A-Garnet-Base/stats.tx)  
+
+# IMPORTANT for stats, set me correctly
+num_memory_controllers = 4 
+num_routers = 4
+ticks_to_cycles = 1000  # that'd be for 1GHz, i.e. 1000 ticks per cycle 
+
+# General stats
 sim_seconds = 0
+sim_ticks = 0
+sim_freq = 0
+# NoC stats 
 external_link_traversals = 0
 internal_link_traversals = 0
 average_packet_latency = 0
@@ -14,17 +28,17 @@ buffer_writes = 0
 sw_input_arbiter_activity = 0
 sw_output_arbiter_activity = 0
 crossbar_activity = 0
+# DRAM / Memory controller stats
 total_ticks_spent_queueing_mc = 0 # queueling delay indicating of BW and latency
 total_time_on_data_bus = 0  # indication of impact on higher mc-to-dram BW 
 total_bytes_read_mc = 0  # bytes read from dram 
-total_bytes_written_mc = 0 # bytes written from dram 
+total_bytes_written_mc = 0 # bytes written from dram
+avg_memory_access_latency = 0 # total ticks spent from burst creation until serviced by the DRAM, avg. memory access latency per DRAM burst
+data_bus_util_perc = 0 # Data bus utilization in percentage
 
-sim_ticks = 0
+counter_begin = 0 # you need to jump the first set of stats, which is the warm-up phase
 
-
-counter_begin = 0 # you need to jump the first set of stats, which is the warm-up phase 
-
-with open("/home/pfotouhi/LBL/is_A-Garnet-Base/stats.txt") as search: 
+with open(sys.argv[1],'r') as search: 
 	for line in search: 
 		if "Begin" in line: 
 			counter_begin = counter_begin + 1
@@ -32,8 +46,17 @@ with open("/home/pfotouhi/LBL/is_A-Garnet-Base/stats.txt") as search:
 		if counter_begin == 2: 
 			if "sim_seconds" in line: 
 				temp_list = line.split()
-				print "sim_seconds: ", temp_list[1]
-			if "system.ruby.network.ext_in_link_utilization" in line: 
+			        sim_seconds = float(temp_list[1])
+                        if "sim_ticks" in line: 
+                                temp_list = line.split()
+                                sim_ticks = float(temp_list[1])
+                        if "sim_freq" in line: 
+                                temp_list = line.split()
+                                sim_freq = float(temp_list[1])
+                        if "final_tick" in line:
+                                temp_list = line.split()
+                                final_tick = float(temp_list[1])
+                        if "system.ruby.network.ext_in_link_utilization" in line: 
 				temp_list = line.split()
 				external_link_traversals = external_link_traversals + float(temp_list[1]) 
 			if "system.ruby.network.ext_out_link_utilization" in line: 
@@ -78,29 +101,48 @@ with open("/home/pfotouhi/LBL/is_A-Garnet-Base/stats.txt") as search:
                         if "bytesWritten" in line:
                                 temp_list = line.split()
                                 total_bytes_written_mc = total_bytes_written_mc + float(temp_list[1])
-                        if "final_tick" in line: 
+                        if "avgMemAccLat" in line: 
                                 temp_list = line.split()
-                                final_tick = float(temp_list[1])
+                                avg_memory_access_latency = avg_memory_access_latency + float(temp_list[1])
+                        if "busUtil " in line: 
+                                temp_list = line.split()
+                                data_bus_util_perc = data_bus_util_perc + float(temp_list[1])
 
-print "==== NoC stats ===="
+print "========= Simulation Stats =========="
+print " "
+print "Seconds simulated: ", sim_seconds 
+print "Ticks simulated: ", sim_ticks
+print "Cycles simulated: ", sim_ticks / ticks_to_cycles
+sim_freq_GHz = sim_freq / 1000000000000 # one tick is one 1ps, so x 10^-12
+print "System frequency (GHz): ", sim_freq_GHz
+print " " 
+print "===== NoC stats ====="
 print "External Link traversals: ", external_link_traversals
 print "Internal Link traversals: ", internal_link_traversals
 print "Average hops: ", avgr_hops
 print "Average packet latency: ", average_packet_latency
-print "Router buffer reads: ", buffer_reads
-print "Router buffer writes: ", buffer_writes
-print "Router sw input arbiter: ", sw_input_arbiter_activity
-print "Router sw output arbiter: ", sw_output_arbiter_activity
-print "Router crossbar traversals: ", crossbar_activity
-print "==== Memory Controller / DRAM stats"
-print "Total number of ticks spent queueing: ", total_ticks_spent_queueing_mc
-print "Total number of cycles spent queueing: ", total_ticks_spent_queueing_mc / 1000
-print "Total number of cycles simulated ", final_tick / 1000
-print "Percentage cycles spent queueing: ", total_ticks_spent_queueing_mc / final_tick
-print "Total time on data bus: ", total_time_on_data_bus
-print "Total bytes read from DRAM: ", total_bytes_read_mc
-print "Total bytes written to DRAM: ", total_bytes_written_mc
-
-
+print "Router buffer reads "
+print "     Total: ", buffer_reads
+print "     Per Router: ", buffer_reads / num_routers
+print "Router buffer writes "
+print "     Total: ", buffer_writes 
+print "     Per Router: ", buffer_writes / num_routers
+print "Router crossbar traversals" 
+print "     Total: ", crossbar_activity 
+print "     Per Router: ", crossbar_activity / num_routers
+print " "
+print "===== Memory Controller / DRAM stats ======"
+print "Total number of cycles spent queueing "
+print "     Total: ", total_ticks_spent_queueing_mc / ticks_to_cycles 
+print "     Per controller: ", total_ticks_spent_queueing_mc / ticks_to_cycles / num_memory_controllers 
+print "Percentage cycles spent queueing (per controller): ", (total_ticks_spent_queueing_mc / ticks_to_cycles / num_memory_controllers) / sim_ticks
+print "Total cycles on data bus "
+print "     Total: ",  total_time_on_data_bus / ticks_to_cycles
+print "     Per controller: ", total_time_on_data_bus / ticks_to_cycles / num_memory_controllers 
+print "Percentage cycles spent on data bus vs. total executed cycles (avg per controller): ", (total_time_on_data_bus / num_memory_controllers) / sim_ticks / ticks_to_cycles
+print "Percentage data bus utilization (avg per controller): ", (data_bus_util_perc / num_memory_controllers) / 100
+print "Total bytes read from DRAM: ", total_bytes_read_mc,"B ,", total_bytes_read_mc/(1024*2014),"MB"
+print "Total bytes written to DRAM: ", total_bytes_written_mc,"B ,", total_bytes_written_mc/(1024*2014),"MB"
+print "Average memory access latency per DRAM burst (cycles): ", avg_memory_access_latency / num_memory_controllers / ticks_to_cycles
 
 
