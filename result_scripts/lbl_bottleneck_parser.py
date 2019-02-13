@@ -19,9 +19,12 @@ total_time_on_data_bus = 0  # indication of impact on higher mc-to-dram BW
 total_bytes_read_mc = 0  # bytes read from dram 
 total_bytes_written_mc = 0 # bytes written from dram 
 
+sim_ticks = 0
+
+
 counter_begin = 0 # you need to jump the first set of stats, which is the warm-up phase 
 
-with open("blackscholes_medium.rcS/Mesh_XY") as search: 
+with open("/home/pfotouhi/LBL/is_A-Garnet-Base/stats.txt") as search: 
 	for line in search: 
 		if "Begin" in line: 
 			counter_begin = counter_begin + 1
@@ -63,19 +66,21 @@ with open("blackscholes_medium.rcS/Mesh_XY") as search:
 			if "crossbar_activity" in line: 
 				temp_list = line.split()
 				crossbar_activity = crossbar_activity + float(temp_list[1])
-                        if "totQLat" in line 
+                        if "totQLat" in line:
                                 temp_list = line.split()
                                 total_ticks_spent_queueing_mc = total_ticks_spent_queueing_mc + float(temp_list[1])
-                        if "totBusLat" in line 
+                        if "totBusLat" in line: 
                                 temp_list = line.split()
                                 total_time_on_data_bus = total_time_on_data_bus + float(temp_list[1])      
-                        if "bytesReadDRAM" in line 
+                        if "bytesReadDRAM" in line: 
                                 temp_list = line.split()
-                                total_bytes_read_mc = total_bytes_read_from_q_mc + float(temp_list[1])
-                        if "bytesWritten" in line 
+                                total_bytes_read_mc = total_bytes_read_mc + float(temp_list[1])
+                        if "bytesWritten" in line:
                                 temp_list = line.split()
                                 total_bytes_written_mc = total_bytes_written_mc + float(temp_list[1])
-                
+                        if "final_tick" in line: 
+                                temp_list = line.split()
+                                final_tick = float(temp_list[1])
 
 print "==== NoC stats ===="
 print "External Link traversals: ", external_link_traversals
@@ -89,6 +94,9 @@ print "Router sw output arbiter: ", sw_output_arbiter_activity
 print "Router crossbar traversals: ", crossbar_activity
 print "==== Memory Controller / DRAM stats"
 print "Total number of ticks spent queueing: ", total_ticks_spent_queueing_mc
+print "Total number of cycles spent queueing: ", total_ticks_spent_queueing_mc / 1000
+print "Total number of cycles simulated ", final_tick / 1000
+print "Percentage cycles spent queueing: ", total_ticks_spent_queueing_mc / final_tick
 print "Total time on data bus: ", total_time_on_data_bus
 print "Total bytes read from DRAM: ", total_bytes_read_mc
 print "Total bytes written to DRAM: ", total_bytes_written_mc
