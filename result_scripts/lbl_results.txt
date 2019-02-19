@@ -1,0 +1,1073 @@
+=========================================================================== 
+Simulation Stats:/home/pfotouhi/LBL/canneal_large-Base/stats.txt
+=========================================================================== 
+Seconds simulated: 0.33851
+Ticks simulated: 3.3850977e+11
+Cycles simulated: 338509770.0
+System frequency (GHz): 1.0
+================================================================= 
+==== NoC stats ==== 
+External Link traversals: 918950604.0
+Internal Link traversals: 424737894.0
+Average hops: 0.924398
+Average packet latency: 27.825647
+Router buffer reads (per router): 221053299.0
+Router buffer reads (total): 884213196.0
+Router buffer writes (per router): 221053299.0
+Router buffer writes (total): 884213196.0
+Router crossbar traversals (per router): 221053299.0
+Router crossbar traversals (total): 884213196.0
+================================================================= 
+==== Memory Controller / DRAM stats ==== 
+Percentage data bus utilization (avg per controller): 0.0147
+Total bytes read from DRAM: 239528896.0B, 116.144457547MB
+Total bytes written to DRAM: 156470656.0B, 75.8705933466MB
+Average memory access latency per DRAM burst (cycles): 54.34811
+Average memory queueing delay per DRAM burst (cycles): 35.34811
+================================================================= 
+
+ 
+=========================================================================== 
+Simulation Stats:/home/pfotouhi/LBL/canneal_large-Opt-16DIR/stats.txt
+=========================================================================== 
+Seconds simulated: 0.995817
+Ticks simulated: 9.95816502e+11
+Cycles simulated: 995816502.0
+System frequency (GHz): 1.0
+================================================================= 
+==== NoC stats ==== 
+External Link traversals: 1830001750.0
+Internal Link traversals: 519443097.0
+Average hops: 0.567697
+Average packet latency: 8.25543
+Router buffer reads (per router): 358610993.0
+Router buffer reads (total): 1434443972.0
+Router buffer writes (per router): 358610993.0
+Router buffer writes (total): 1434443972.0
+Router crossbar traversals (per router): 358610993.0
+Router crossbar traversals (total): 1434443972.0
+================================================================= 
+==== Memory Controller / DRAM stats ==== 
+Percentage data bus utilization (avg per controller): 0.057775
+Total bytes read from DRAM: 2584277952.0B, 1253.08288853MB
+Total bytes written to DRAM: 2196102272.0B, 1064.86153178MB
+Average memory access latency per DRAM burst (cycles): 239.20406
+Average memory queueing delay per DRAM burst (cycles): 163.20406
+================================================================= 
+
+ 
+=========================================================================== 
+Simulation Stats:/home/pfotouhi/LBL/canneal_large-Opt-4CH/stats.txt
+=========================================================================== 
+Seconds simulated: 0.543753
+Ticks simulated: 5.43752529e+11
+Cycles simulated: 543752529.0
+System frequency (GHz): 1.0
+================================================================= 
+==== NoC stats ==== 
+External Link traversals: 1858525326.0
+Internal Link traversals: 533152989.0
+Average hops: 0.573738
+Average packet latency: 8.295182
+Router buffer reads (per router): 365603913.0
+Router buffer reads (total): 1462415652.0
+Router buffer writes (per router): 365603913.0
+Router buffer writes (total): 1462415652.0
+Router crossbar traversals (per router): 365603913.0
+Router crossbar traversals (total): 1462415652.0
+================================================================= 
+==== Memory Controller / DRAM stats ==== 
+Percentage data bus utilization (avg per controller): 0.10625
+Total bytes read from DRAM: 2604682368.0B, 1262.97672542MB
+Total bytes written to DRAM: 2185026240.0B, 1059.4909074MB
+Average memory access latency per DRAM burst (cycles): 70.4434625
+Average memory queueing delay per DRAM burst (cycles): 51.4434625
+================================================================= 
+
+ 
+=========================================================================== 
+Simulation Stats:/home/pfotouhi/LBL/canneal_large-Opt-8DIR/stats.txt
+=========================================================================== 
+Seconds simulated: 0.568285
+Ticks simulated: 5.68285021e+11
+Cycles simulated: 568285021.0
+System frequency (GHz): 1.0
+================================================================= 
+==== NoC stats ==== 
+External Link traversals: 1861604618.0
+Internal Link traversals: 534614425.0
+Average hops: 0.574359
+Average packet latency: 8.319977
+Router buffer reads (per router): 366354183.5
+Router buffer reads (total): 1465416734.0
+Router buffer writes (per router): 366354183.5
+Router buffer writes (total): 1465416734.0
+Router crossbar traversals (per router): 366354183.5
+Router crossbar traversals (total): 1465416734.0
+================================================================= 
+==== Memory Controller / DRAM stats ==== 
+Percentage data bus utilization (avg per controller): 0.101525
+Total bytes read from DRAM: 2598978048.0B, 1260.21077458MB
+Total bytes written to DRAM: 2184884224.0B, 1059.42204568MB
+Average memory access latency per DRAM burst (cycles): 123.97435
+Average memory queueing delay per DRAM burst (cycles): 85.97435
+================================================================= 
+
+ 
+=========================================================================== 
+Simulation Stats:/home/pfotouhi/LBL/canneal_large-Opt-Bx2/stats.txt
+=========================================================================== 
+Seconds simulated: 0.948078
+Ticks simulated: 9.480780805e+11
+Cycles simulated: 948078080.5
+System frequency (GHz): 1.0
+================================================================= 
+==== NoC stats ==== 
+External Link traversals: 1889131710.0
+Internal Link traversals: 545231384.0
+Average hops: 0.57723
+Average packet latency: 8.294062
+Router buffer reads (per router): 372449309.75
+Router buffer reads (total): 1489797239.0
+Router buffer writes (per router): 372449309.75
+Router buffer writes (total): 1489797239.0
+Router crossbar traversals (per router): 372449309.75
+Router crossbar traversals (total): 1489797239.0
+================================================================= 
+==== Memory Controller / DRAM stats ==== 
+Percentage data bus utilization (avg per controller): 0.12295
+Total bytes read from DRAM: 2633091392.0B, 1276.751893MB
+Total bytes written to DRAM: 2195322624.0B, 1064.48349057MB
+Average memory access latency per DRAM burst (cycles): 71.13676
+Average memory queueing delay per DRAM burst (cycles): 52.13676
+================================================================= 
+
+ 
+=========================================================================== 
+Simulation Stats:/home/pfotouhi/LBL/canneal_large-Opt-Bx4/stats.txt
+=========================================================================== 
+Seconds simulated: 0.720343
+Ticks simulated: 7.203434855e+11
+Cycles simulated: 720343485.5
+System frequency (GHz): 1.0
+================================================================= 
+==== NoC stats ==== 
+External Link traversals: 1879717536.0
+Internal Link traversals: 541856464.0
+Average hops: 0.57653
+Average packet latency: 8.313338
+Router buffer reads (per router): 370428808.0
+Router buffer reads (total): 1481715232.0
+Router buffer writes (per router): 370428808.0
+Router buffer writes (total): 1481715232.0
+Router crossbar traversals (per router): 370428808.0
+Router crossbar traversals (total): 1481715232.0
+================================================================= 
+==== Memory Controller / DRAM stats ==== 
+Percentage data bus utilization (avg per controller): 0.080725
+Total bytes read from DRAM: 2623717376.0B, 1272.20655412MB
+Total bytes written to DRAM: 2193772192.0B, 1063.73170618MB
+Average memory access latency per DRAM burst (cycles): 67.2517725
+Average memory queueing delay per DRAM burst (cycles): 50.2517725
+================================================================= 
+
+ 
+=========================================================================== 
+Simulation Stats:/home/pfotouhi/LBL/fftX_large-Base/stats.txt
+=========================================================================== 
+Seconds simulated: 1.67431
+Ticks simulated: 1.674309912e+12
+Cycles simulated: 1674309912.0
+System frequency (GHz): 1.0
+================================================================= 
+==== NoC stats ==== 
+External Link traversals: 5554292502.0
+Internal Link traversals: 2338809349.0
+Average hops: 0.842163
+Average packet latency: 29.80848
+Router buffer reads (per router): 1278988900.0
+Router buffer reads (total): 5115955600.0
+Router buffer writes (per router): 1278988900.0
+Router buffer writes (total): 5115955600.0
+Router crossbar traversals (per router): 1278988900.0
+Router crossbar traversals (total): 5115955600.0
+================================================================= 
+==== Memory Controller / DRAM stats ==== 
+Percentage data bus utilization (avg per controller): 0.0404
+Total bytes read from DRAM: 2684261760.0B, 1301.56374131MB
+Total bytes written to DRAM: 3283153664.0B, 1591.95866435MB
+Average memory access latency per DRAM burst (cycles): 64.257675
+Average memory queueing delay per DRAM burst (cycles): 45.257675
+================================================================= 
+
+ 
+=========================================================================== 
+Simulation Stats:/home/pfotouhi/LBL/fftX_large-Opt-16DIR/stats.txt
+=========================================================================== 
+Seconds simulated: 2.182057
+Ticks simulated: 2.1820572465e+12
+Cycles simulated: 2182057246.5
+System frequency (GHz): 1.0
+================================================================= 
+==== NoC stats ==== 
+External Link traversals: 9480014380.0
+Internal Link traversals: 2628926071.0
+Average hops: 0.554625
+Average packet latency: 9.057157
+Router buffer reads (per router): 1842233315.25
+Router buffer reads (total): 7368933261.0
+Router buffer writes (per router): 1842233315.25
+Router buffer writes (total): 7368933261.0
+Router crossbar traversals (per router): 1842233315.25
+Router crossbar traversals (total): 7368933261.0
+================================================================= 
+==== Memory Controller / DRAM stats ==== 
+Percentage data bus utilization (avg per controller): 0.15325
+Total bytes read from DRAM: 11527318656.0B, 5589.44743049MB
+Total bytes written to DRAM: 19756916544.0B, 9579.87279667MB
+Average memory access latency per DRAM burst (cycles): 220.720235
+Average memory queueing delay per DRAM burst (cycles): 144.720235
+================================================================= 
+
+ 
+=========================================================================== 
+Simulation Stats:/home/pfotouhi/LBL/fftX_large-Opt-4CH/stats.txt
+=========================================================================== 
+Seconds simulated: 2.420197
+Ticks simulated: 2.420197122e+12
+Cycles simulated: 2420197122.0
+System frequency (GHz): 1.0
+================================================================= 
+==== NoC stats ==== 
+External Link traversals: 9548088602.0
+Internal Link traversals: 2630969497.0
+Average hops: 0.551099
+Average packet latency: 8.994786
+Router buffer reads (per router): 1851253449.5
+Router buffer reads (total): 7405013798.0
+Router buffer writes (per router): 1851253449.5
+Router buffer writes (total): 7405013798.0
+Router crossbar traversals (per router): 1851253449.5
+Router crossbar traversals (total): 7405013798.0
+================================================================= 
+==== Memory Controller / DRAM stats ==== 
+Percentage data bus utilization (avg per controller): 0.14145
+Total bytes read from DRAM: 11905104256.0B, 5772.6307721MB
+Total bytes written to DRAM: 20009359744.0B, 9702.27923287MB
+Average memory access latency per DRAM burst (cycles): 73.231505
+Average memory queueing delay per DRAM burst (cycles): 54.231505
+================================================================= 
+
+ 
+=========================================================================== 
+Simulation Stats:/home/pfotouhi/LBL/fftX_large-Opt-8DIR/stats.txt
+=========================================================================== 
+Seconds simulated: 2.263511
+Ticks simulated: 2.263510852e+12
+Cycles simulated: 2263510852.0
+System frequency (GHz): 1.0
+================================================================= 
+==== NoC stats ==== 
+External Link traversals: 9548749458.0
+Internal Link traversals: 2633298796.0
+Average hops: 0.551548
+Average packet latency: 9.020832
+Router buffer reads (per router): 1851918381.25
+Router buffer reads (total): 7407673525.0
+Router buffer writes (per router): 1851918381.25
+Router buffer writes (total): 7407673525.0
+Router crossbar traversals (per router): 1851918381.25
+Router crossbar traversals (total): 7407673525.0
+================================================================= 
+==== Memory Controller / DRAM stats ==== 
+Percentage data bus utilization (avg per controller): 0.1507
+Total bytes read from DRAM: 11823392640.0B, 5733.00986842MB
+Total bytes written to DRAM: 20012272768.0B, 9703.69172046MB
+Average memory access latency per DRAM burst (cycles): 121.309255
+Average memory queueing delay per DRAM burst (cycles): 83.309255
+================================================================= 
+
+ 
+=========================================================================== 
+Simulation Stats:/home/pfotouhi/LBL/fftX_large-Opt-Bx2/stats.txt
+=========================================================================== 
+Seconds simulated: 2.568371
+Ticks simulated: 2.5683710925e+12
+Cycles simulated: 2568371092.5
+System frequency (GHz): 1.0
+================================================================= 
+==== NoC stats ==== 
+External Link traversals: 9660876304.0
+Internal Link traversals: 2669079757.0
+Average hops: 0.552554
+Average packet latency: 8.917545
+Router buffer reads (per router): 1874879477.25
+Router buffer reads (total): 7499517909.0
+Router buffer writes (per router): 1874879477.25
+Router buffer writes (total): 7499517909.0
+Router crossbar traversals (per router): 1874879477.25
+Router crossbar traversals (total): 7499517909.0
+================================================================= 
+==== Memory Controller / DRAM stats ==== 
+Percentage data bus utilization (avg per controller): 0.269875
+Total bytes read from DRAM: 12083914368.0B, 5859.33347815MB
+Total bytes written to DRAM: 20192271552.0B, 9790.97079816MB
+Average memory access latency per DRAM burst (cycles): 82.3991975
+Average memory queueing delay per DRAM burst (cycles): 63.3991975
+================================================================= 
+
+ 
+=========================================================================== 
+Simulation Stats:/home/pfotouhi/LBL/fftX_large-Opt-Bx4/stats.txt
+=========================================================================== 
+Seconds simulated: 2.456759
+Ticks simulated: 2.4567589715e+12
+Cycles simulated: 2456758971.5
+System frequency (GHz): 1.0
+================================================================= 
+==== NoC stats ==== 
+External Link traversals: 9644783514.0
+Internal Link traversals: 2658803333.0
+Average hops: 0.551345
+Average packet latency: 8.956159
+Router buffer reads (per router): 1870298772.5
+Router buffer reads (total): 7481195090.0
+Router buffer writes (per router): 1870298772.5
+Router buffer writes (total): 7481195090.0
+Router crossbar traversals (per router): 1870298772.5
+Router crossbar traversals (total): 7481195090.0
+================================================================= 
+==== Memory Controller / DRAM stats ==== 
+Percentage data bus utilization (avg per controller): 0.140975
+Total bytes read from DRAM: 12053324640.0B, 5844.50091547MB
+Total bytes written to DRAM: 20223523744.0B, 9806.12458106MB
+Average memory access latency per DRAM burst (cycles): 73.8715825
+Average memory queueing delay per DRAM burst (cycles): 56.8715825
+================================================================= 
+
+ 
+=========================================================================== 
+Simulation Stats:/home/pfotouhi/LBL/is_A-Base/stats.txt
+=========================================================================== 
+Seconds simulated: 0.867124
+Ticks simulated: 8.67124327e+11
+Cycles simulated: 867124327.0
+System frequency (GHz): 1.0
+================================================================= 
+==== NoC stats ==== 
+External Link traversals: 1739701464.0
+Internal Link traversals: 819943879.0
+Average hops: 0.942626
+Average packet latency: 29.629003
+Router buffer reads (per router): 422448652.75
+Router buffer reads (total): 1689794611.0
+Router buffer writes (per router): 422448652.75
+Router buffer writes (total): 1689794611.0
+Router crossbar traversals (per router): 422448652.75
+Router crossbar traversals (total): 1689794611.0
+================================================================= 
+==== Memory Controller / DRAM stats ==== 
+Percentage data bus utilization (avg per controller): 0.0091
+Total bytes read from DRAM: 325757952.0B, 157.955809335MB
+Total bytes written to DRAM: 355621184.0B, 172.436103525MB
+Average memory access latency per DRAM burst (cycles): 53.839915
+Average memory queueing delay per DRAM burst (cycles): 34.839915
+================================================================= 
+
+ 
+=========================================================================== 
+Simulation Stats:/home/pfotouhi/LBL/is_A-Opt-16DIR/stats.txt
+=========================================================================== 
+Seconds simulated: 1.109198
+Ticks simulated: 1.1091984245e+12
+Cycles simulated: 1109198424.5
+System frequency (GHz): 1.0
+================================================================= 
+==== NoC stats ==== 
+External Link traversals: 3593450288.0
+Internal Link traversals: 1040676993.0
+Average hops: 0.579208
+Average packet latency: 8.858847
+Router buffer reads (per router): 709350534.25
+Router buffer reads (total): 2837402137.0
+Router buffer writes (per router): 709350534.25
+Router buffer writes (total): 2837402137.0
+Router crossbar traversals (per router): 709350534.25
+Router crossbar traversals (total): 2837402137.0
+================================================================= 
+==== Memory Controller / DRAM stats ==== 
+Percentage data bus utilization (avg per controller): 0.101025
+Total bytes read from DRAM: 4091125952.0B, 1983.73395606MB
+Total bytes written to DRAM: 6166322624.0B, 2989.96992925MB
+Average memory access latency per DRAM burst (cycles): 240.285725
+Average memory queueing delay per DRAM burst (cycles): 164.285725
+================================================================= 
+
+ 
+=========================================================================== 
+Simulation Stats:/home/pfotouhi/LBL/is_A-Opt-4CH/stats.txt
+=========================================================================== 
+Seconds simulated: 1.187826
+Ticks simulated: 1.1878259545e+12
+Cycles simulated: 1187825954.5
+System frequency (GHz): 1.0
+================================================================= 
+==== NoC stats ==== 
+External Link traversals: 3607894088.0
+Internal Link traversals: 1043874527.0
+Average hops: 0.578661
+Average packet latency: 8.782004
+Router buffer reads (per router): 711955392.75
+Router buffer reads (total): 2847821571.0
+Router buffer writes (per router): 711955392.75
+Router buffer writes (total): 2847821571.0
+Router crossbar traversals (per router): 711955392.75
+Router crossbar traversals (total): 2847821571.0
+================================================================= 
+==== Memory Controller / DRAM stats ==== 
+Percentage data bus utilization (avg per controller): 0.098225
+Total bytes read from DRAM: 4355351616.0B, 2111.85355636MB
+Total bytes written to DRAM: 6223914816.0B, 3017.89563679MB
+Average memory access latency per DRAM burst (cycles): 79.336845
+Average memory queueing delay per DRAM burst (cycles): 60.336845
+================================================================= 
+
+ 
+=========================================================================== 
+Simulation Stats:/home/pfotouhi/LBL/is_A-Opt-4CH_WDRAM/stats.txt
+=========================================================================== 
+Seconds simulated: 0
+Ticks simulated: 0
+Cycles simulated: 0
+System frequency (GHz): 0
+================================================================= 
+==== NoC stats ==== 
+External Link traversals: 0
+Internal Link traversals: 0
+Average hops: 0
+Average packet latency: 0
+Router buffer reads (per router): 0
+Router buffer reads (total): 0
+Router buffer writes (per router): 0
+Router buffer writes (total): 0
+Router crossbar traversals (per router): 0
+Router crossbar traversals (total): 0
+================================================================= 
+==== Memory Controller / DRAM stats ==== 
+Percentage data bus utilization (avg per controller): 0
+Total bytes read from DRAM: 0B, 0MB
+Total bytes written to DRAM: 0B, 0MB
+Average memory access latency per DRAM burst (cycles): 0
+Average memory queueing delay per DRAM burst (cycles): 0
+================================================================= 
+
+ 
+=========================================================================== 
+Simulation Stats:/home/pfotouhi/LBL/is_A-Opt-8DIR/stats.txt
+=========================================================================== 
+Seconds simulated: 1.14361
+Ticks simulated: 1.143609884e+12
+Cycles simulated: 1143609884.0
+System frequency (GHz): 1.0
+================================================================= 
+==== NoC stats ==== 
+External Link traversals: 3619241452.0
+Internal Link traversals: 1045959100.0
+Average hops: 0.577999
+Average packet latency: 8.817855
+Router buffer reads (per router): 713894956.5
+Router buffer reads (total): 2855579826.0
+Router buffer writes (per router): 713894956.5
+Router buffer writes (total): 2855579826.0
+Router crossbar traversals (per router): 713894956.5
+Router crossbar traversals (total): 2855579826.0
+================================================================= 
+==== Memory Controller / DRAM stats ==== 
+Percentage data bus utilization (avg per controller): 0.10095
+Total bytes read from DRAM: 4283043648.0B, 2076.79235973MB
+Total bytes written to DRAM: 6212271616.0B, 3012.25MB
+Average memory access latency per DRAM burst (cycles): 131.6944475
+Average memory queueing delay per DRAM burst (cycles): 93.6944475
+================================================================= 
+
+ 
+=========================================================================== 
+Simulation Stats:/home/pfotouhi/LBL/is_A-Opt-Bx2/stats.txt
+=========================================================================== 
+Seconds simulated: 1.21023
+Ticks simulated: 1.210230341e+12
+Cycles simulated: 1210230341.0
+System frequency (GHz): 1.0
+================================================================= 
+==== NoC stats ==== 
+External Link traversals: 3635625484.0
+Internal Link traversals: 1049588153.0
+Average hops: 0.577391
+Average packet latency: 8.730053
+Router buffer reads (per router): 716850223.75
+Router buffer reads (total): 2867400895.0
+Router buffer writes (per router): 716850223.75
+Router buffer writes (total): 2867400895.0
+Router crossbar traversals (per router): 716850223.75
+Router crossbar traversals (total): 2867400895.0
+================================================================= 
+==== Memory Controller / DRAM stats ==== 
+Percentage data bus utilization (avg per controller): 0.1966
+Total bytes read from DRAM: 4453508192.0B, 2159.44840802MB
+Total bytes written to DRAM: 6319174976.0B, 3064.08605387MB
+Average memory access latency per DRAM burst (cycles): 82.6713825
+Average memory queueing delay per DRAM burst (cycles): 63.6713825
+================================================================= 
+
+ 
+=========================================================================== 
+Simulation Stats:/home/pfotouhi/LBL/is_A-Opt-Bx4/stats.txt
+=========================================================================== 
+Seconds simulated: 1.184148
+Ticks simulated: 1.1841475995e+12
+Cycles simulated: 1184147599.5
+System frequency (GHz): 1.0
+================================================================= 
+==== NoC stats ==== 
+External Link traversals: 3624318986.0
+Internal Link traversals: 1046936931.0
+Average hops: 0.577729
+Average packet latency: 8.775519
+Router buffer reads (per router): 714774106.0
+Router buffer reads (total): 2859096424.0
+Router buffer writes (per router): 714774106.0
+Router buffer writes (total): 2859096424.0
+Router crossbar traversals (per router): 714774106.0
+Router crossbar traversals (total): 2859096424.0
+================================================================= 
+==== Memory Controller / DRAM stats ==== 
+Percentage data bus utilization (avg per controller): 0.100025
+Total bytes read from DRAM: 4430188960.0B, 2148.14121462MB
+Total bytes written to DRAM: 6301534624.0B, 3055.53247579MB
+Average memory access latency per DRAM burst (cycles): 76.6127125
+Average memory queueing delay per DRAM burst (cycles): 59.6127125
+================================================================= 
+
+ 
+=========================================================================== 
+Simulation Stats:/home/pfotouhi/LBL/mg_A-Base/stats.txt
+=========================================================================== 
+Seconds simulated: 4.055424
+Ticks simulated: 4.055423703e+12
+Cycles simulated: 4055423703.0
+System frequency (GHz): 1.0
+================================================================= 
+==== NoC stats ==== 
+External Link traversals: 10224309896.0
+Internal Link traversals: 3516596441.0
+Average hops: 0.687889
+Average packet latency: 23.218599
+Router buffer reads (per router): 2157187847.25
+Router buffer reads (total): 8628751389.0
+Router buffer writes (per router): 2157187847.25
+Router buffer writes (total): 8628751389.0
+Router crossbar traversals (per router): 2157187847.25
+Router crossbar traversals (total): 8628751389.0
+================================================================= 
+==== Memory Controller / DRAM stats ==== 
+Percentage data bus utilization (avg per controller): 0.0583
+Total bytes read from DRAM: 10452387072.0B, 5068.22703575MB
+Total bytes written to DRAM: 9344880000.0B, 4531.21120904MB
+Average memory access latency per DRAM burst (cycles): 62.1906075
+Average memory queueing delay per DRAM burst (cycles): 43.1906075
+================================================================= 
+
+ 
+=========================================================================== 
+Simulation Stats:/home/pfotouhi/LBL/mg_A-Opt-16DIR/stats.txt
+=========================================================================== 
+Seconds simulated: 4.671565
+Ticks simulated: 4.6715645195e+12
+Cycles simulated: 4671564519.5
+System frequency (GHz): 1.0
+================================================================= 
+==== NoC stats ==== 
+External Link traversals: 16058109144.0
+Internal Link traversals: 4532676068.0
+Average hops: 0.564534
+Average packet latency: 7.816652
+Router buffer reads (per router): 3140432660.0
+Router buffer reads (total): 12561730640.0
+Router buffer writes (per router): 3140432660.0
+Router buffer writes (total): 12561730640.0
+Router crossbar traversals (per router): 3140432660.0
+Router crossbar traversals (total): 12561730640.0
+================================================================= 
+==== Memory Controller / DRAM stats ==== 
+Percentage data bus utilization (avg per controller): 0.101875
+Total bytes read from DRAM: 22385314112.0B, 10854.3487152MB
+Total bytes written to DRAM: 16172315968.0B, 7841.74643123MB
+Average memory access latency per DRAM burst (cycles): 224.8643375
+Average memory queueing delay per DRAM burst (cycles): 148.8643375
+================================================================= 
+
+ 
+=========================================================================== 
+Simulation Stats:/home/pfotouhi/LBL/mg_A-Opt-4CH/stats.txt
+=========================================================================== 
+Seconds simulated: 4.915381
+Ticks simulated: 4.915380688e+12
+Cycles simulated: 4915380688.0
+System frequency (GHz): 1.0
+================================================================= 
+==== NoC stats ==== 
+External Link traversals: 15874905276.0
+Internal Link traversals: 4475185638.0
+Average hops: 0.563806
+Average packet latency: 7.790943
+Router buffer reads (per router): 3103159569.0
+Router buffer reads (total): 12412638276.0
+Router buffer writes (per router): 3103159569.0
+Router buffer writes (total): 12412638276.0
+Router crossbar traversals (per router): 3103159569.0
+Router crossbar traversals (total): 12412638276.0
+================================================================= 
+==== Memory Controller / DRAM stats ==== 
+Percentage data bus utilization (avg per controller): 0.098775
+Total bytes read from DRAM: 23079567424.0B, 11190.9831492MB
+Total bytes written to DRAM: 15980865792.0B, 7748.91472195MB
+Average memory access latency per DRAM burst (cycles): 66.680365
+Average memory queueing delay per DRAM burst (cycles): 47.680365
+================================================================= 
+
+ 
+=========================================================================== 
+Simulation Stats:/home/pfotouhi/LBL/mg_A-Opt-8DIR/stats.txt
+=========================================================================== 
+Seconds simulated: 4.787775
+Ticks simulated: 4.787775347e+12
+Cycles simulated: 4787775347.0
+System frequency (GHz): 1.0
+================================================================= 
+==== NoC stats ==== 
+External Link traversals: 15881267670.0
+Internal Link traversals: 4478387238.0
+Average hops: 0.563984
+Average packet latency: 7.807697
+Router buffer reads (per router): 3104755268.25
+Router buffer reads (total): 12419021073.0
+Router buffer writes (per router): 3104755268.25
+Router buffer writes (total): 12419021073.0
+Router crossbar traversals (per router): 3104755268.25
+Router crossbar traversals (total): 12419021073.0
+================================================================= 
+==== Memory Controller / DRAM stats ==== 
+Percentage data bus utilization (avg per controller): 0.10035
+Total bytes read from DRAM: 22753299648.0B, 11032.7801328MB
+Total bytes written to DRAM: 15982458368.0B, 7749.68694141MB
+Average memory access latency per DRAM burst (cycles): 123.2046625
+Average memory queueing delay per DRAM burst (cycles): 85.2046625
+================================================================= 
+
+ 
+=========================================================================== 
+Simulation Stats:/home/pfotouhi/LBL/mg_A-Opt-Bx2/stats.txt
+=========================================================================== 
+Seconds simulated: 5.102884
+Ticks simulated: 5.102883595e+12
+Cycles simulated: 5102883595.0
+System frequency (GHz): 1.0
+================================================================= 
+==== NoC stats ==== 
+External Link traversals: 15893820116.0
+Internal Link traversals: 4481942882.0
+Average hops: 0.563986
+Average packet latency: 7.767663
+Router buffer reads (per router): 3107213235.0
+Router buffer reads (total): 12428852940.0
+Router buffer writes (per router): 3107213235.0
+Router buffer writes (total): 12428852940.0
+Router crossbar traversals (per router): 3107213235.0
+Router crossbar traversals (total): 12428852940.0
+================================================================= 
+==== Memory Controller / DRAM stats ==== 
+Percentage data bus utilization (avg per controller): 0.191975
+Total bytes read from DRAM: 23303093920.0B, 11299.3682504MB
+Total bytes written to DRAM: 16092104608.0B, 7802.85298225MB
+Average memory access latency per DRAM burst (cycles): 71.380145
+Average memory queueing delay per DRAM burst (cycles): 52.380145
+================================================================= 
+
+ 
+=========================================================================== 
+Simulation Stats:/home/pfotouhi/LBL/mg_A-Opt-Bx4/stats.txt
+=========================================================================== 
+Seconds simulated: 4.994455
+Ticks simulated: 4.9944550535e+12
+Cycles simulated: 4994455053.5
+System frequency (GHz): 1.0
+================================================================= 
+==== NoC stats ==== 
+External Link traversals: 16045041054.0
+Internal Link traversals: 4523681017.0
+Average hops: 0.563873
+Average packet latency: 7.789242
+Router buffer reads (per router): 3136550386.0
+Router buffer reads (total): 12546201544.0
+Router buffer writes (per router): 3136550386.0
+Router buffer writes (total): 12546201544.0
+Router crossbar traversals (per router): 3136550386.0
+Router crossbar traversals (total): 12546201544.0
+================================================================= 
+==== Memory Controller / DRAM stats ==== 
+Percentage data bus utilization (avg per controller): 0.099225
+Total bytes read from DRAM: 23510608896.0B, 11399.989573MB
+Total bytes written to DRAM: 16401891328.0B, 7953.06454816MB
+Average memory access latency per DRAM burst (cycles): 66.8622625
+Average memory queueing delay per DRAM burst (cycles): 49.8622625
+================================================================= 
+
+ 
+=========================================================================== 
+Simulation Stats:/home/pfotouhi/LBL/radixX_large-Base/stats.txt
+=========================================================================== 
+Seconds simulated: 2.953892
+Ticks simulated: 2.953891583e+12
+Cycles simulated: 2953891583.0
+System frequency (GHz): 1.0
+================================================================= 
+==== NoC stats ==== 
+External Link traversals: 11155158248.0
+Internal Link traversals: 4622460523.0
+Average hops: 0.828757
+Average packet latency: 31.121068
+Router buffer reads (per router): 2550009911.75
+Router buffer reads (total): 10200039647.0
+Router buffer writes (per router): 2550009911.75
+Router buffer writes (total): 10200039647.0
+Router crossbar traversals (per router): 2550009911.75
+Router crossbar traversals (total): 10200039647.0
+================================================================= 
+==== Memory Controller / DRAM stats ==== 
+Percentage data bus utilization (avg per controller): 0.048125
+Total bytes read from DRAM: 6176578752.0B, 2994.9429928MB
+Total bytes written to DRAM: 5850705856.0B, 2836.93144861MB
+Average memory access latency per DRAM burst (cycles): 60.552065
+Average memory queueing delay per DRAM burst (cycles): 41.552065
+================================================================= 
+
+ 
+=========================================================================== 
+Simulation Stats:/home/pfotouhi/LBL/radixX_large-Opt-16DIR/stats.txt
+=========================================================================== 
+Seconds simulated: 4.232482
+Ticks simulated: 4.232482086e+12
+Cycles simulated: 4232482086.0
+System frequency (GHz): 1.0
+================================================================= 
+==== NoC stats ==== 
+External Link traversals: 19426446287.0
+Internal Link traversals: 5333596092.0
+Average hops: 0.549107
+Average packet latency: 9.153623
+Router buffer reads (per router): 3761704809.0
+Router buffer reads (total): 15046819236.0
+Router buffer writes (per router): 3761704809.0
+Router buffer writes (total): 15046819236.0
+Router crossbar traversals (per router): 3761704809.0
+Router crossbar traversals (total): 15046819236.0
+================================================================= 
+==== Memory Controller / DRAM stats ==== 
+Percentage data bus utilization (avg per controller): 0.165425
+Total bytes read from DRAM: 24043664128.0B, 11658.461147MB
+Total bytes written to DRAM: 41547182720.0B, 20145.6904791MB
+Average memory access latency per DRAM burst (cycles): 249.99237
+Average memory queueing delay per DRAM burst (cycles): 173.99237
+================================================================= 
+
+ 
+=========================================================================== 
+Simulation Stats:/home/pfotouhi/LBL/radixX_large-Opt-4CH/stats.txt
+=========================================================================== 
+Seconds simulated: 4.841659
+Ticks simulated: 4.84165876e+12
+Cycles simulated: 4841658760.0
+System frequency (GHz): 1.0
+================================================================= 
+==== NoC stats ==== 
+External Link traversals: 19473060488.0
+Internal Link traversals: 5335012159.0
+Average hops: 0.547938
+Average packet latency: 9.04761
+Router buffer reads (per router): 3767885600.75
+Router buffer reads (total): 15071542403.0
+Router buffer writes (per router): 3767885600.75
+Router buffer writes (total): 15071542403.0
+Router crossbar traversals (per router): 3767885600.75
+Router crossbar traversals (total): 15071542403.0
+================================================================= 
+==== Memory Controller / DRAM stats ==== 
+Percentage data bus utilization (avg per controller): 0.1466
+Total bytes read from DRAM: 24575148992.0B, 11916.1712699MB
+Total bytes written to DRAM: 41695049792.0B, 20217.3893061MB
+Average memory access latency per DRAM burst (cycles): 84.36208
+Average memory queueing delay per DRAM burst (cycles): 65.36208
+================================================================= 
+
+ 
+=========================================================================== 
+Simulation Stats:/home/pfotouhi/LBL/radixX_large-Opt-8DIR/stats.txt
+=========================================================================== 
+Seconds simulated: 4.401581
+Ticks simulated: 4.401580979e+12
+Cycles simulated: 4401580979.0
+System frequency (GHz): 1.0
+================================================================= 
+==== NoC stats ==== 
+External Link traversals: 19415322384.0
+Internal Link traversals: 5317556341.0
+Average hops: 0.547769
+Average packet latency: 9.106998
+Router buffer reads (per router): 3756304383.25
+Router buffer reads (total): 15025217533.0
+Router buffer writes (per router): 3756304383.25
+Router buffer writes (total): 15025217533.0
+Router crossbar traversals (per router): 3756304383.25
+Router crossbar traversals (total): 15025217533.0
+================================================================= 
+==== Memory Controller / DRAM stats ==== 
+Percentage data bus utilization (avg per controller): 0.16035
+Total bytes read from DRAM: 24369149376.0B, 11816.2847257MB
+Total bytes written to DRAM: 41591359424.0B, 20167.1111904MB
+Average memory access latency per DRAM burst (cycles): 138.1005025
+Average memory queueing delay per DRAM burst (cycles): 100.1005025
+================================================================= 
+
+ 
+=========================================================================== 
+Simulation Stats:/home/pfotouhi/LBL/radixX_large-Opt-Bx2/stats.txt
+=========================================================================== 
+Seconds simulated: 4.892707
+Ticks simulated: 4.892707061e+12
+Cycles simulated: 4892707061.0
+System frequency (GHz): 1.0
+================================================================= 
+==== NoC stats ==== 
+External Link traversals: 19514527508.0
+Internal Link traversals: 5343239651.0
+Average hops: 0.547617
+Average packet latency: 8.965999
+Router buffer reads (per router): 3775125851.25
+Router buffer reads (total): 15100503405.0
+Router buffer writes (per router): 3775125851.25
+Router buffer writes (total): 15100503405.0
+Router crossbar traversals (per router): 3775125851.25
+Router crossbar traversals (total): 15100503405.0
+================================================================= 
+==== Memory Controller / DRAM stats ==== 
+Percentage data bus utilization (avg per controller): 0.291525
+Total bytes read from DRAM: 24744033344.0B, 11998.0611035MB
+Total bytes written to DRAM: 41805039392.0B, 20270.7218378MB
+Average memory access latency per DRAM burst (cycles): 88.670065
+Average memory queueing delay per DRAM burst (cycles): 69.670065
+================================================================= 
+
+ 
+=========================================================================== 
+Simulation Stats:/home/pfotouhi/LBL/radixX_large-Opt-Bx4/stats.txt
+=========================================================================== 
+Seconds simulated: 4.710963
+Ticks simulated: 4.7109633905e+12
+Cycles simulated: 4710963390.5
+System frequency (GHz): 1.0
+================================================================= 
+==== NoC stats ==== 
+External Link traversals: 19707759318.0
+Internal Link traversals: 5403579942.0
+Average hops: 0.548371
+Average packet latency: 9.046073
+Router buffer reads (per router): 3814364900.0
+Router buffer reads (total): 15257459600.0
+Router buffer writes (per router): 3814364900.0
+Router buffer writes (total): 15257459600.0
+Router crossbar traversals (per router): 3814364900.0
+Router crossbar traversals (total): 15257459600.0
+================================================================= 
+==== Memory Controller / DRAM stats ==== 
+Percentage data bus utilization (avg per controller): 0.1527
+Total bytes read from DRAM: 24939489984.0B, 12092.8354953MB
+Total bytes written to DRAM: 42216633952.0B, 20470.2987059MB
+Average memory access latency per DRAM burst (cycles): 80.4127075
+Average memory queueing delay per DRAM burst (cycles): 63.4127075
+================================================================= 
+
+ 
+=========================================================================== 
+Simulation Stats:/home/pfotouhi/LBL/srad_v2-Base/stats.txt
+=========================================================================== 
+Seconds simulated: 1.611772
+Ticks simulated: 1.6117722915e+12
+Cycles simulated: 1611772291.5
+System frequency (GHz): 1.0
+================================================================= 
+==== NoC stats ==== 
+External Link traversals: 1026140262.0
+Internal Link traversals: 447986703.0
+Average hops: 0.873149
+Average packet latency: 28.758512
+Router buffer reads (per router): 240264208.5
+Router buffer reads (total): 961056834.0
+Router buffer writes (per router): 240264208.5
+Router buffer writes (total): 961056834.0
+Router crossbar traversals (per router): 240264208.5
+Router crossbar traversals (total): 961056834.0
+================================================================= 
+==== Memory Controller / DRAM stats ==== 
+Percentage data bus utilization (avg per controller): 0.0066
+Total bytes read from DRAM: 394559360.0B, 191.316720457MB
+Total bytes written to DRAM: 574516032.0B, 278.5753786MB
+Average memory access latency per DRAM burst (cycles): 64.5360625
+Average memory queueing delay per DRAM burst (cycles): 45.5360625
+================================================================= 
+
+ 
+=========================================================================== 
+Simulation Stats:/home/pfotouhi/LBL/srad_v2-Opt-16DIR/stats.txt
+=========================================================================== 
+Seconds simulated: 1.767145
+Ticks simulated: 1.7671449595e+12
+Cycles simulated: 1767144959.5
+System frequency (GHz): 1.0
+================================================================= 
+==== NoC stats ==== 
+External Link traversals: 1237249888.0
+Internal Link traversals: 466927410.0
+Average hops: 0.754783
+Average packet latency: 9.72499
+Router buffer reads (per router): 271388088.5
+Router buffer reads (total): 1085552354.0
+Router buffer writes (per router): 271388088.5
+Router buffer writes (total): 1085552354.0
+Router crossbar traversals (per router): 271388088.5
+Router crossbar traversals (total): 1085552354.0
+================================================================= 
+==== Memory Controller / DRAM stats ==== 
+Percentage data bus utilization (avg per controller): 0.012775
+Total bytes read from DRAM: 950688832.0B, 460.976694389MB
+Total bytes written to DRAM: 984912576.0B, 477.57134434MB
+Average memory access latency per DRAM burst (cycles): 371.8583825
+Average memory queueing delay per DRAM burst (cycles): 295.8583825
+================================================================= 
+
+ 
+=========================================================================== 
+Simulation Stats:/home/pfotouhi/LBL/srad_v2-Opt-4CH/stats.txt
+=========================================================================== 
+Seconds simulated: 1.723741
+Ticks simulated: 1.7237409e+12
+Cycles simulated: 1723740900.0
+System frequency (GHz): 1.0
+================================================================= 
+==== NoC stats ==== 
+External Link traversals: 1233397381.0
+Internal Link traversals: 464856760.0
+Average hops: 0.753783
+Average packet latency: 9.683055
+Router buffer reads (per router): 270388862.75
+Router buffer reads (total): 1081555451.0
+Router buffer writes (per router): 270388862.75
+Router buffer writes (total): 1081555451.0
+Router crossbar traversals (per router): 270388862.75
+Router crossbar traversals (total): 1081555451.0
+================================================================= 
+==== Memory Controller / DRAM stats ==== 
+Percentage data bus utilization (avg per controller): 0.013125
+Total bytes read from DRAM: 964525952.0B, 467.686134558MB
+Total bytes written to DRAM: 975641984.0B, 473.076154419MB
+Average memory access latency per DRAM burst (cycles): 73.23137
+Average memory queueing delay per DRAM burst (cycles): 54.23137
+================================================================= 
+
+ 
+=========================================================================== 
+Simulation Stats:/home/pfotouhi/LBL/srad_v2-Opt-8DIR/stats.txt
+=========================================================================== 
+Seconds simulated: 1.733954
+Ticks simulated: 1.7339542155e+12
+Cycles simulated: 1733954215.5
+System frequency (GHz): 1.0
+================================================================= 
+==== NoC stats ==== 
+External Link traversals: 1240633960.0
+Internal Link traversals: 468187810.0
+Average hops: 0.754756
+Average packet latency: 9.690948
+Router buffer reads (per router): 272126197.5
+Router buffer reads (total): 1088504790.0
+Router buffer writes (per router): 272126197.5
+Router buffer writes (total): 1088504790.0
+Router crossbar traversals (per router): 272126197.5
+Router crossbar traversals (total): 1088504790.0
+================================================================= 
+==== Memory Controller / DRAM stats ==== 
+Percentage data bus utilization (avg per controller): 0.0131
+Total bytes read from DRAM: 963419712.0B, 467.149733118MB
+Total bytes written to DRAM: 978930560.0B, 474.670742304MB
+Average memory access latency per DRAM burst (cycles): 158.3034775
+Average memory queueing delay per DRAM burst (cycles): 120.3034775
+================================================================= 
+
+ 
+=========================================================================== 
+Simulation Stats:/home/pfotouhi/LBL/srad_v2-Opt-Bx2/stats.txt
+=========================================================================== 
+Seconds simulated: 1.744152
+Ticks simulated: 1.7441515345e+12
+Cycles simulated: 1744151534.5
+System frequency (GHz): 1.0
+================================================================= 
+==== NoC stats ==== 
+External Link traversals: 1235730061.0
+Internal Link traversals: 466232259.0
+Average hops: 0.754586
+Average packet latency: 9.66599
+Router buffer reads (per router): 271024322.25
+Router buffer reads (total): 1084097289.0
+Router buffer writes (per router): 271024322.25
+Router buffer writes (total): 1084097289.0
+Router crossbar traversals (per router): 271024322.25
+Router crossbar traversals (total): 1084097289.0
+================================================================= 
+==== Memory Controller / DRAM stats ==== 
+Percentage data bus utilization (avg per controller): 0.0261
+Total bytes read from DRAM: 966942848.0B, 468.858056107MB
+Total bytes written to DRAM: 979258528.0B, 474.829769737MB
+Average memory access latency per DRAM burst (cycles): 78.820705
+Average memory queueing delay per DRAM burst (cycles): 59.820705
+================================================================= 
+
+ 
+=========================================================================== 
+Simulation Stats:/home/pfotouhi/LBL/srad_v2-Opt-Bx4/stats.txt
+=========================================================================== 
+Seconds simulated: 1.723866
+Ticks simulated: 1.723865607e+12
+Cycles simulated: 1723865607.0
+System frequency (GHz): 1.0
+================================================================= 
+==== NoC stats ==== 
+External Link traversals: 1234803998.0
+Internal Link traversals: 465871085.0
+Average hops: 0.754567
+Average packet latency: 9.678021
+Router buffer reads (per router): 270818271.0
+Router buffer reads (total): 1083273084.0
+Router buffer writes (per router): 270818271.0
+Router buffer writes (total): 1083273084.0
+Router crossbar traversals (per router): 270818271.0
+Router crossbar traversals (total): 1083273084.0
+================================================================= 
+==== Memory Controller / DRAM stats ==== 
+Percentage data bus utilization (avg per controller): 0.013225
+Total bytes read from DRAM: 970103008.0B, 470.390376738MB
+Total bytes written to DRAM: 977868064.0B, 474.155551763MB
+Average memory access latency per DRAM burst (cycles): 74.3755775
+Average memory queueing delay per DRAM burst (cycles): 57.3755775
+================================================================= 
+
+ 

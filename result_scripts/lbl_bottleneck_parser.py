@@ -6,6 +6,8 @@ import string
 
 # This file extracts stats while jumping over the first set of sets (in many workloads that is the app setup phase we're not interested in) 
 # IMPORTANT: You have to pass the *absolute* path of the stats.txt file to this script, e.g. /home/pfotouhi/LBL/is_A-Garnet-Base/stats.tx)  
+# as well as the absolute path to the output file, i.e. 
+# ./lbl_bottleneck_parser.py /home/swerner/LBL/is_A-Base/stats.txt /home/swerner/gem5_NGNS/result_scripts/lbl_results.txt 
 
 # IMPORTANT for stats, set me correctly
 num_memory_controllers = 4 
@@ -35,8 +37,9 @@ total_bytes_read_mc = 0  # bytes read from dram
 total_bytes_written_mc = 0 # bytes written from dram
 avg_memory_access_latency = 0 # total ticks spent from burst creation until serviced by the DRAM, avg. memory access latency per DRAM burst
 data_bus_util_perc = 0 # Data bus utilization in percentage
+avgQLat = 0
 
-counter_begin = 0 # you need to jump the first set of stats, which is the warm-up phase
+counter_begin = 0 # needed to skip the first set of stats, which is the warm-up phase
 
 with open(sys.argv[1],'r') as search: 
 	for line in search: 
@@ -107,7 +110,42 @@ with open(sys.argv[1],'r') as search:
                         if "busUtil " in line: 
                                 temp_list = line.split()
                                 data_bus_util_perc = data_bus_util_perc + float(temp_list[1])
+                        if "avgQLat" in line: 
+                                temp_list = line.split()
+                                avgQLat = avgQLat + float(temp_list[1])
 
+with open(sys.argv[2], "a") as results:
+    results.write("=========================================================================== \n")
+    results.write("Simulation Stats:" + str(sys.argv[1]) + "\n")
+    results.write("=========================================================================== \n")
+    results.write("Seconds simulated: " + str(sim_seconds) + "\n")
+    results.write("Ticks simulated: " + str(sim_ticks) + "\n")
+    results.write("Cycles simulated: " + str(sim_ticks / ticks_to_cycles) + "\n")
+    results.write("System frequency (GHz): " + str(sim_freq / 1000000000000) + "\n")
+    results.write("================================================================= \n")
+    results.write("==== NoC stats ==== \n")    
+    results.write("External Link traversals: " + str(external_link_traversals) + "\n")
+    results.write("Internal Link traversals: " + str(internal_link_traversals) + "\n")
+    results.write("Average hops: " + str(avgr_hops) + "\n")
+    results.write("Average packet latency: " + str(average_packet_latency) + "\n")
+    results.write("Router buffer reads (per router): " + str(buffer_reads / num_routers) + "\n")
+    results.write("Router buffer reads (total): " + str(buffer_reads) + "\n")
+    results.write("Router buffer writes (per router): " + str(buffer_writes / num_routers) + "\n")
+    results.write("Router buffer writes (total): " + str(buffer_writes) + "\n")
+    results.write("Router crossbar traversals (per router): " + str(crossbar_activity / num_routers) + "\n")
+    results.write("Router crossbar traversals (total): " + str(crossbar_activity) + "\n")
+    results.write("================================================================= \n")
+    results.write("==== Memory Controller / DRAM stats ==== \n")
+    results.write("Percentage data bus utilization (avg per controller): " + str((data_bus_util_perc / num_memory_controllers) / 100) + "\n")
+    results.write("Total bytes read from DRAM: " + str(total_bytes_read_mc) + "B, " + str(total_bytes_read_mc/(1024*2014)) + "MB" + "\n") 
+    results.write("Total bytes written to DRAM: " + str(total_bytes_written_mc) + "B, " + str(total_bytes_written_mc/(1024*2014)) + "MB" + "\n")
+    results.write("Average memory access latency per DRAM burst (cycles): " + str(avg_memory_access_latency / num_memory_controllers / ticks_to_cycles) + "\n")
+    results.write("Average memory queueing delay per DRAM burst (cycles): " + str(avgQLat / num_memory_controllers / ticks_to_cycles) + "\n")
+    results.write("================================================================= \n")
+    results.write("\n \n")
+
+# remove comment if you want it printed out on screen 
+'''
 print "========= Simulation Stats =========="
 print " "
 print "Seconds simulated: ", sim_seconds 
@@ -134,15 +172,15 @@ print " "
 print "===== Memory Controller / DRAM stats ======"
 print "Total number of cycles spent queueing "
 print "     Total: ", total_ticks_spent_queueing_mc / ticks_to_cycles 
-print "     Per controller: ", total_ticks_spent_queueing_mc / ticks_to_cycles / num_memory_controllers 
+print "     Per controller: ", (total_ticks_spent_queueing_mc / ticks_to_cycles) / num_memory_controllers 
 print "Percentage cycles spent queueing (per controller): ", (total_ticks_spent_queueing_mc / num_memory_controllers) / sim_ticks
 print "Total cycles on data bus "
 print "     Total: ",  total_time_on_data_bus / ticks_to_cycles
-print "     Per controller: ", total_time_on_data_bus / ticks_to_cycles / num_memory_controllers 
+print "     Per controller: ", (total_time_on_data_bus / ticks_to_cycles) / num_memory_controllers 
 print "Percentage cycles spent on data bus vs. total executed cycles (avg per controller): ", (total_time_on_data_bus / num_memory_controllers) / sim_ticks / ticks_to_cycles
 print "Percentage data bus utilization (avg per controller): ", (data_bus_util_perc / num_memory_controllers) / 100
 print "Total bytes read from DRAM: ", total_bytes_read_mc,"B ,", total_bytes_read_mc/(1024*2014),"MB"
 print "Total bytes written to DRAM: ", total_bytes_written_mc,"B ,", total_bytes_written_mc/(1024*2014),"MB"
 print "Average memory access latency per DRAM burst (cycles): ", avg_memory_access_latency / num_memory_controllers / ticks_to_cycles
-
-
+print "Average memory queueing delay per DRAM burst (cycles): ", avgQLat / num_memory_controllers / ticks_to_cycles
+'''
